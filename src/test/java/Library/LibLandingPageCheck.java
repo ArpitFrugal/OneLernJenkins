@@ -34,6 +34,10 @@ public class LibLandingPageCheck extends Base {
 		log = new LoginPage(driver);
 
 	}
+	
+	public void ThreadSleep5000() throws InterruptedException {
+		Thread.sleep(5000);
+	}
 
 	@Epic("This story represents the Library module of the onelern_school project.")
 	@Description("Examine whether or not the student can successfully get inside the library module.")
@@ -42,12 +46,14 @@ public class LibLandingPageCheck extends Base {
 	public void studentLanding(String mobNumber, String password) throws IOException, InterruptedException {
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("student", mobNumber, password);
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.StudentImageClick().click();
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.StudentLibraryToggle().click();
-		Thread.sleep(5000);
-		if (driver.getPageSource().contains("Library")) {
+		ThreadSleep5000();
+		String Headingtext_actual = lib.WorkbookHeading().getText();
+		String Headingtext_expected = "Library";
+		if (Headingtext_actual.equals(Headingtext_expected)) {
 			System.out.println("Library Module is active");
 		} else {
 			Assert.fail();
@@ -62,10 +68,12 @@ public class LibLandingPageCheck extends Base {
 	public void teacherLanding(String mobNumber, String password) throws IOException, InterruptedException {
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("teacher", mobNumber, password);
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.TeacherLibraryToggle().click();
-		Thread.sleep(5000);
-		if (driver.getPageSource().contains("Library")) {
+		ThreadSleep5000();
+		String Headingtext_actual = lib.WorkbookHeading().getText();
+		String Headingtext_expected = "Library";
+		if (Headingtext_actual.equals(Headingtext_expected)) {
 			System.out.println("Library Module is active");
 		} else {
 			Assert.fail();

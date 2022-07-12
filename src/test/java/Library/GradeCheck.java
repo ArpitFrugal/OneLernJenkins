@@ -35,6 +35,17 @@ public class GradeCheck extends Base {
 
 	}
 
+	public void ThreadSleep5000() throws InterruptedException {
+		Thread.sleep(5000);
+	}
+	public void ValidateTest(String actual_grade, String expected_grade){
+		if (actual_grade.equals(expected_grade)) {
+			System.out.println("PASSED");
+		} else {
+			Assert.fail();
+		}
+	}
+
 	@Epic("This story represents the Library module of the onelern_school project.")
 	@Description("To see if a student in a specific grade has the correct grade book")
 	@Story("LIBF_03")
@@ -43,69 +54,45 @@ public class GradeCheck extends Base {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("student", mobNumber, password);
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.StudentImageClick().click();
-		;
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.StudentLibraryToggle().click();
-		if (mob >= 9000000001l && mob <= 9000000020l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='616064e79e1fe601b5ee7677']//span[@class='svelte-a6l9q'][normalize-space()='Grade 1']"))
-					.getText();
-			String grade = "GRADE 1";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+		ThreadSleep5000();
+		if (mob >= 9000000001l && mob <= 9000000020l) {// English
+			String actual_grade = lib.EnglishGradeTextGrade1().getText();
+			String expected_grade = "GRADE 1";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
-		else if (mob >= 9000000021l && mob <= 9000000040l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='61606c609e1fe601b5ee7690']//span[@class='svelte-a6l9q'][normalize-space()='Grade 2']"))
-					.getText();
-			String grade = "GRADE 2";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+		else if (mob >= 9000000021l && mob <= 9000000040l) {// English
+			String actual_grade = lib.EnglishGradeTextGrade2().getText();
+			String expected_grade = "GRADE 2";
+
+			ValidateTest(actual_grade, expected_grade);
 
 		}
 
-		else if (mob >= 9000000041l && mob <= 9000000060l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='61606e699e1fe601b5ee7697']//span[@class='svelte-a6l9q'][normalize-space()='Grade 3']"))
-					.getText();
-			String grade = "GRADE 3";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+		else if (mob >= 9000000041l && mob <= 9000000060l) {// English
+			String actual_grade = lib.EnglishGradeTextGrade3().getText();
+			String expected_grade = "GRADE 3";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000061l && mob <= 9000000080l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='616070b99e1fe601b5ee769f']//span[@class='svelte-a6l9q'][normalize-space()='Grade 4']"))
-					.getText();
-			String grade = "GRADE 4";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade4().getText();
+			String expected_grade = "GRADE 4";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000081l && mob <= 9000000100l) {
-			String text = driver
-					.findElement(By.xpath("(//span[@class='svelte-a6l9q'][normalize-space()='Grade 5'])[1]")).getText();
-			String grade = "GRADE 5";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade5().getText();
+			String expected_grade = "GRADE 5";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 	}
@@ -118,65 +105,41 @@ public class GradeCheck extends Base {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("teacher", mobNumber, password);
-		Thread.sleep(5000);
+		ThreadSleep5000();
 		lib.TeacherLibraryToggle().click();
 		if (mob >= 9000000101l && mob <= 9000000104l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='616064e79e1fe601b5ee7677']//span[@class='svelte-a6l9q'][normalize-space()='Grade 1']"))
-					.getText();
-			String grade = "GRADE 1";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade1().getText();
+			String expected_grade = "GRADE 1";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000105l && mob <= 9000000108l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='61606c609e1fe601b5ee7690']//span[@class='svelte-a6l9q'][normalize-space()='Grade 2']"))
-					.getText();
-			String grade = "GRADE 2";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			}
+			String actual_grade = lib.EnglishGradeTextGrade2().getText();
+			String expected_grade = "GRADE 2";
 
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000109l && mob <= 9000000112l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='61606e699e1fe601b5ee7697']//span[@class='svelte-a6l9q'][normalize-space()='Grade 3']"))
-					.getText();
-			String grade = "GRADE 3";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade3().getText();
+			String expected_grade = "GRADE 3";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000113l && mob <= 9000000116l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='616070b99e1fe601b5ee769f']//span[@class='svelte-a6l9q'][normalize-space()='Grade 4']"))
-					.getText();
-			String grade = "GRADE 4";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade4().getText();
+			String expected_grade = "GRADE 4";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 		else if (mob >= 9000000117l && mob <= 9000000120l) {
-			String text = driver.findElement(By.xpath(
-					"//div[@id='6160748b9e1fe601b5ee76a7']//span[@class='svelte-a6l9q'][normalize-space()='Grade 5']"))
-					.getText();
-			String grade = "GRADE 5";
-			if (text.equals(grade)) {
-				System.out.println("PASSED");
-			} else {
-				Assert.fail();
-			}
+			String actual_grade = lib.EnglishGradeTextGrade5().getText();
+			String expected_grade = "GRADE 5";
+
+			ValidateTest(actual_grade, expected_grade);
 		}
 
 	}

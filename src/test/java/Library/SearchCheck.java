@@ -33,6 +33,15 @@ public class SearchCheck extends Base {
         log = new LoginPage(driver);
     }
 
+    public void ThreadSleep5000() throws InterruptedException {
+        Thread.sleep(5000);
+    }
+
+    public void ThreadSleep3000() throws InterruptedException {
+        Thread.sleep(3000);
+    }
+
+
     public void ValidateTest(int expected_count, int countInSearchBox, int search_elements_size){
         if(countInSearchBox == expected_count && search_elements_size == expected_count ){
             System.out.println("PASSED");
@@ -51,19 +60,19 @@ public class SearchCheck extends Base {
         user.userLogin("student", mobNumber, password);
         lib.StudentImageClick().click();
 
-        Thread.sleep(3000);
+        ThreadSleep3000();
         lib.StudentLibraryToggle().click();
-        Thread.sleep(3000);
+        ThreadSleep3000();
 
         if (mob >= 9000000001l && mob <= 9000000020l){ // Environmental Studies Coursebook - Part A
             String search_text= "good";
             int expected_count=4;
 
             lib.EnvironmentalcoursebookGrade1().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click third lesson
             lib.ThirdLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -71,7 +80,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -85,10 +94,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.EnglishCoursebookGrade2().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -96,7 +105,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -110,10 +119,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.MathematicsCoursebookGrade3().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -121,7 +130,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -135,10 +144,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.EnglishCoursebookGrade4().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -146,7 +155,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -160,10 +169,10 @@ public class SearchCheck extends Base {
             int expected_count= 2;
 
             lib.EnglishCoursebookGrade5().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -171,7 +180,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -193,17 +202,17 @@ public class SearchCheck extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(5000);
         lib.TeacherLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         if (mob >= 9000000101l && mob <= 9000000104l){ // Environmental Studies Coursebook - Part A
             String search_text= "good";
             int expected_count=4;
 
             lib.EnvironmentalcoursebookGrade1().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click third lesson
             lib.ThirdLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -211,7 +220,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -225,10 +234,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.EnglishCoursebookGrade2().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -236,7 +245,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -250,10 +259,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.MathematicsCoursebookGrade3().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -261,7 +270,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -275,10 +284,10 @@ public class SearchCheck extends Base {
             int expected_count= 3;
 
             lib.EnglishCoursebookGrade4().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -286,7 +295,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());
@@ -300,10 +309,10 @@ public class SearchCheck extends Base {
             int expected_count= 2;
 
             lib.EnglishCoursebookGrade5().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             //click first lesson
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // click on search icon
             lib.SearchIcon().click();
@@ -311,7 +320,7 @@ public class SearchCheck extends Base {
             //input the text
             lib.SearchInput().sendKeys(search_text);
 
-            Thread.sleep(3000);
+            ThreadSleep3000();
             List<WebElement> search_elements= lib.HighlightTexts();
 
             int countInSearchBox= Integer.parseInt(lib.TotalCount());

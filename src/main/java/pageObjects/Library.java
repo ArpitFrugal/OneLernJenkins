@@ -15,6 +15,15 @@ public class Library {
 	By StudentLibraryToggle = By.xpath("//img[@src='/images/library-white.svg']");
 	By TeacherBackButton = By.xpath("/html/body/header/div[1]/div[1]/button");
 
+
+	// Grade check
+	By EnglishGradeTextGrade1 = By.xpath("//div[@id='616064e79e1fe601b5ee7677']//span");
+	By EnglishGradeTextGrade2 = By.xpath("//div[@id='61606c609e1fe601b5ee7690']//span");
+	By EnglishGradeTextGrade3 = By.xpath("//div[@id='61606e699e1fe601b5ee7697']//span");
+	By EnglishGradeTextGrade4 = By.xpath("//div[@id='616070b99e1fe601b5ee769f']//span");
+	By EnglishGradeTextGrade5 = By.xpath("//div[@id='6160748b9e1fe601b5ee76a7']//span");
+
+
 	// lesson name verify
 	By FirstLessonText = By.xpath("//*[@id='item_1']/div/div[2]");
 	By SecondLessonText = By.xpath("//*[@id='item_2']/div/div[2]");
@@ -23,11 +32,28 @@ public class Library {
 
 
 	// lesson topics verify
-	By FirstTopicref = By.xpath("/html/body/div[3]/div/div[4]/div/div/div/div[1]/div/div/div/h2");
-	By SecondTopicref = By.xpath("/html/body/div[3]/div/div[5]/div/div/div/div[1]/div/div/div/h2/span[2]");
-	By SecondTopicrefEng = By.xpath("/html/body/div[3]/div/div[5]/div/div/div/div[1]/div/div/div/h2");
-	By ThirdTopicref = By.xpath("/html/body/div[3]/div/div[6]/div/div/div/div[1]/div/div/div/h2/span[2]");
-	By ThirdTopicrefEng = By.xpath("/html/body/div[3]/div/div[6]/div/div/div/div[1]/div/div/div/h2");
+	By EnvFirstLessonFirstTopicRefGrade1 = By.xpath("//*[@id='6220ae6e92520323185f705b']/div/div/div/h2");
+	By EnvFirstLessonSecondTopicRefGrade1 = By.xpath("//*[@id='6220ae6e1da0f07e208ab956']/div/div/div/h2/span[2]");
+	By EnvFirstLessonThirdTopicRefGrade1 = By.xpath("//*[@id='6220ae6e12604efa010ff0e2']/div/div/div/h2/span[2]");
+
+	By EngThirdLessonFirstTopicRefGrade2 = By.xpath("//*[@id='622ae4eb86c5d6273ab3c668']/div/div/div/h2");
+	By EngThirdLessonSecondTopicRefGrade2 = By.xpath("//*[@id='622ae4eb1d6b160b5664262a']/div/div/div/h2");
+	By EngThirdLessonThirdTopicRefGrade2 = By.xpath("//*[@id='622ae4eb442a5dc3d209c006']/div/div/div/h2");
+
+	By MathFirstLessonFirstTopicRefGrade3 = By.xpath("//*[@id='6225f85049ef78a1df908273']/div/div/div/h2");
+	By MathFirstLessonSecondTopicRefGrade3 = By.xpath("//*[@id='6225f85030731be09847b5dc']/div/div/div/h2/span[2]");
+	By MathFirstLessonThirdTopicRefGrade3 = By.xpath("//*[@id='6225f850b9cf5047f8a3513a']/div/div/div/h2/span[2]");
+
+	By EngFirstLessonFirstTopicRefGrade4 = By.xpath("//*[@id='6228a6f9df9f3125a2007bd8']/div/div/div/h2");
+	By EngFirstLessonSecondTopicRefGrade4 = By.xpath("//*[@id='6228a6f9e5ee41cc16ae495a']/div/div/div/h2");
+	By EngFirstLessonThirdTopicRefGrade4 = By.xpath("//*[@id='6228a6f9cc5c3b068d477790']/div/div/div/h2");
+
+	By MathFirstLessonFirstTopicRefGrade5 = By.xpath("//*[@id='6225ff0d50a3c5ff8177f83a']/div/div/div/h2");
+	By MathFirstLessonSecondTopicRefGrade5 = By.xpath("//*[@id='6225ff0d1aabf5bae3ae7fde']/div/div/div/h2/span[2]");
+	By MathFirstLessonThirdTopicRefGrade5 = By.xpath("//*[@id='6225ff0ded61257d6cf12d46']/div/div/div/h2/span[2]");
+
+
+
 	By LessonHeading = By.xpath("/html/body/div[3]/div/div[2]/div/h1");
 
 
@@ -85,6 +111,14 @@ public class Library {
 		return driver.findElement(TeacherBackButton);
 	}
 
+
+	// Grade Check
+	public WebElement EnglishGradeTextGrade1(){return driver.findElement(EnglishGradeTextGrade1);}
+	public WebElement EnglishGradeTextGrade2(){return driver.findElement(EnglishGradeTextGrade2);}
+	public WebElement EnglishGradeTextGrade3(){return driver.findElement(EnglishGradeTextGrade3);}
+	public WebElement EnglishGradeTextGrade4(){return driver.findElement(EnglishGradeTextGrade4);}
+	public WebElement EnglishGradeTextGrade5(){return driver.findElement(EnglishGradeTextGrade5);}
+
 	// lesson name verify
 	public String LessonHeadingText(){
 		String str = driver.findElement(LessonHeading).getText();
@@ -99,11 +133,27 @@ public class Library {
 
 	//lessons topic verify
 
-	public WebElement FirstTopicref(){return driver.findElement(FirstTopicref);}
-	public WebElement SecondTopicref(){return driver.findElement(SecondTopicref);}
-	public WebElement ThirdTopicref(){return driver.findElement(ThirdTopicref);}
-	public WebElement SecondTopicrefEng(){return driver.findElement(SecondTopicrefEng);}
-	public WebElement ThirdTopicrefEng(){return driver.findElement(ThirdTopicrefEng);}
+	public WebElement EnvFirstLessonFirstTopicRefGrade1(){return driver.findElement(EnvFirstLessonFirstTopicRefGrade1);}
+	public WebElement EnvFirstLessonSecondTopicRefGrade1(){return driver.findElement(EnvFirstLessonSecondTopicRefGrade1);}
+	public WebElement EnvFirstLessonThirdTopicRefGrade1(){return driver.findElement(EnvFirstLessonThirdTopicRefGrade1);}
+
+	public WebElement EngThirdLessonFirstTopicRefGrade2(){return driver.findElement(EngThirdLessonFirstTopicRefGrade2);}
+	public WebElement EngThirdLessonSecondTopicRefGrade2(){return driver.findElement(EngThirdLessonSecondTopicRefGrade2);}
+	public WebElement EngThirdLessonThirdTopicRefGrade2(){return driver.findElement(EngThirdLessonThirdTopicRefGrade2);}
+
+	public WebElement MathFirstLessonFirstTopicRefGrade3(){return driver.findElement(MathFirstLessonFirstTopicRefGrade3);}
+	public WebElement MathFirstLessonSecondTopicRefGrade3(){return driver.findElement(MathFirstLessonSecondTopicRefGrade3);}
+	public WebElement MathFirstLessonThirdTopicRefGrade3(){return driver.findElement(MathFirstLessonThirdTopicRefGrade3);}
+
+	public WebElement EngFirstLessonFirstTopicRefGrade4(){return driver.findElement(EngFirstLessonFirstTopicRefGrade4);}
+	public WebElement EngFirstLessonSecondTopicRefGrade4(){return driver.findElement(EngFirstLessonSecondTopicRefGrade4);}
+	public WebElement EngFirstLessonThirdTopicRefGrade4(){return driver.findElement(EngFirstLessonThirdTopicRefGrade4);}
+
+	public WebElement MathFirstLessonFirstTopicRefGrade5(){return driver.findElement(MathFirstLessonFirstTopicRefGrade5);}
+	public WebElement MathFirstLessonSecondTopicRefGrade5(){return driver.findElement(MathFirstLessonSecondTopicRefGrade5);}
+	public WebElement MathFirstLessonThirdTopicRefGrade5(){return driver.findElement(MathFirstLessonThirdTopicRefGrade5);}
+
+
 
 
 

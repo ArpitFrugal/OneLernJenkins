@@ -54,9 +54,9 @@ public class LessonNameVerify extends Base {
         user.userLogin("student", mobNumber, password);
         lib.StudentImageClick().click();
 
-        Thread.sleep(5000);
+        ThreadSleep5000();
         lib.StudentLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         // Scrolling Page
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -121,11 +121,11 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000021l && mob <= 9000000040l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade2();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
 
             lib.ThirdLesson().click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();
@@ -237,9 +237,9 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000061l && mob <= 9000000080l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade4();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();
@@ -295,9 +295,9 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000081l && mob <= 9000000100l) { // Mathematics Coursebook - Part A
             WebElement element = lib.MathematicsCoursebookGrade5();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();
@@ -372,9 +372,9 @@ public class LessonNameVerify extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
 
-        Thread.sleep(5000);
+        ThreadSleep5000();
         lib.TeacherLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         // Scrolling Page
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -438,11 +438,11 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade2();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
 
             lib.ThirdLesson().click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();
@@ -554,9 +554,9 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade4();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();
@@ -612,9 +612,9 @@ public class LessonNameVerify extends Base {
         else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
             WebElement element = lib.MathematicsCoursebookGrade5();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstLesson = lib.FirstLesson();

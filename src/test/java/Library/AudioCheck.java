@@ -65,11 +65,11 @@ public class AudioCheck extends Base {
         return loginData;
     }
 
-//    @DataProvider(name = "Teachersdata")
-//    public Object[][] getteacherData() throws FileAlreadyExistsException {
-//
-//        Object loginData[][] = {{"9000000117", "123456"}, {"9000000105", "123456"}, {"9000000110", "123456"},
-//                {"9000000114", "123456"}, {"9000000120", "123456"}};
-//        return loginData;
-//    }
+    @DataProvider(name = "Teachersdata")
+    public Object[][] getteacherData() throws FileAlreadyExistsException {
+
+        Object loginData[][] = {{"9000000117", "123456"}, {"9000000105", "123456"}, {"9000000110", "123456"},
+                {"9000000114", "123456"}, {"9000000120", "123456"}};
+        return loginData;
+    }
 }

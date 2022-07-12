@@ -6,23 +6,25 @@
 </listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-<!--			Login-->
-<!--			<class name="loginFunctionality.LoginLandingPageCheck" />-->
-<!--			<class name="loginFunctionality.UserSignInFunctionality" />-->
+
+			<!--			Notebook-->
+			<class name="Notebook.NotebookLandingPageCheck"/>
+			<class name="Notebook.GradeCheck"/>
+			<class name="Notebook.LessonNameVerify"/>
+
 <!--			Library-->
-<!--			<class name="Library.LibLandingPageCheck" />-->
-<!--			<class name="Library.GradeCheck" />-->
-<!--			<class name="Library.WorkbookNameVerify" />-->
-<!--			<class name="Library.LessonNameVerify"/>-->
+			<class name="Library.LibLandingPageCheck" />
+			<class name="Library.GradeCheck" />
+			<class name="Library.WorkbookNameVerify" />
+			<class name="Library.LessonNameVerify"/>
 			<class name="Library.LessonTopicsVerify" />
-<!--			<class name="Library.SearchCheck" />-->
-<!--			<class name="Library.VideoCheck" />-->
-<!--			Notebook-->
-<!--			<class name="Notebook.NotebookLandingPageCheck"/>-->
-<!--			<class name="Notebook.GradeCheck"/>-->
-<!--			<class name="Notebook.LessonNameVerify"/>-->
+			<class name="Library.SearchCheck" />
+			<class name="Library.VideoCheck" />
 
 
+			<!--			Login-->
+			<class name="loginFunctionality.LoginLandingPageCheck" />
+			<class name="loginFunctionality.UserSignInFunctionality" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

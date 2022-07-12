@@ -35,6 +35,14 @@ public class VideoCheck extends Base {
         log = new LoginPage(driver);
     }
 
+    public void ThreadSleep5000() throws InterruptedException {
+        Thread.sleep(5000);
+    }
+    public void ThreadSleep3000() throws InterruptedException {
+        Thread.sleep(3000);
+    }
+
+
     public void VideoPlay(){
         js.executeScript("document.getElementsByTagName('video')[0].play()");
     }
@@ -64,27 +72,27 @@ public class VideoCheck extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
         lib.StudentImageClick().click();
-        Thread.sleep(3000);
+        ThreadSleep3000();
 
         lib.StudentLibraryToggle().click();
-        Thread.sleep(3000);
+        ThreadSleep3000();
 
         // Scrolling Page
         js = (JavascriptExecutor) driver;
         if (mob >= 9000000001l && mob <= 9000000020l) { // Environmental Studies Coursebook - Part A
             lib.EnvironmentalcoursebookGrade1().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -94,36 +102,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EnvVideoPathGrade1());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000021l && mob <= 9000000040l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade2().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -133,36 +141,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade2());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000041l && mob <= 9000000060l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade3().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -172,36 +180,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade3());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000061l && mob <= 9000000080l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade4().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -211,36 +219,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade4());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000081l && mob <= 9000000100l) { // Mathematics Coursebook - Part A
             Thread.sleep(10000);
             lib.MathematicsCoursebookGrade5().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -250,18 +258,18 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.MathVideoPathGrade5());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
@@ -276,27 +284,27 @@ public class VideoCheck extends Base {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
-        Thread.sleep(5000);
+        ThreadSleep5000();
         lib.TeacherLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         // Scrolling Page
         js = (JavascriptExecutor) driver;
 
         if (mob >= 9000000101l && mob <= 9000000104l) { // Environmental Studies Coursebook - Part A
             lib.EnvironmentalcoursebookGrade1().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -306,36 +314,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EnvVideoPathGrade1());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade2().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -345,36 +353,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade2());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000109l && mob <= 9000000112l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade3().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -384,36 +392,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade3());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
             Thread.sleep(10000);
             lib.EnglishCoursebookGrade4().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -423,36 +431,36 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.EngVideoPathGrade4());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
         else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
             Thread.sleep(10000);
             lib.MathematicsCoursebookGrade5().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.FirstLesson().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             lib.videosPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
             lib.VideoWatchBtn().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // check video
             ValidateVideoStatus();
@@ -462,18 +470,18 @@ public class VideoCheck extends Base {
 
             //contents
             lib.ContentsPageTab().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             //click first topic
             lib.FirstTopic().click();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ScrollToVideo(lib.MathVideoPathGrade5());
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             // play video
             VideoPlay();
-            Thread.sleep(3000);
+            ThreadSleep3000();
 
             ValidateVideoStatus();
         }
@@ -489,9 +497,9 @@ public class VideoCheck extends Base {
     @DataProvider(name = "Studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-//        Object loginData[][] = {{"9000000001", "123456"}, {"9000000024", "123456"}, {"9000000046", "123456"},
-//                {"9000000069", "123456"}, {"9000000081", "123456"}};
-        Object loginData[][] = {{"9000000001", "123456"}};
+        Object loginData[][] = {{"9000000001", "123456"}, {"9000000024", "123456"}, {"9000000046", "123456"},
+                {"9000000069", "123456"}, {"9000000081", "123456"}};
+//        Object loginData[][] = {{"9000000001", "123456"}};
         return loginData;
     }
 

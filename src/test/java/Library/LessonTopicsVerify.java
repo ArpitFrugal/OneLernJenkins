@@ -63,9 +63,9 @@ public class LessonTopicsVerify extends Base {
         user.userLogin("student", mobNumber, password);
         lib.StudentImageClick().click();
 
-        Thread.sleep(5000);
+        ThreadSleep5000();
         lib.StudentLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         // Scrolling Page
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -83,7 +83,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
             ThreadSleep5000();
-            text = lib.FirstTopicref().getText();
+            text = lib.EnvFirstLessonFirstTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -97,7 +97,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.EnvFirstLessonSecondTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -111,7 +111,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.EnvFirstLessonThirdTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -123,11 +123,11 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000021l && mob <= 9000000040l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade2();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
 
             lib.ThirdLesson().click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -135,7 +135,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.EngThirdLessonFirstTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -149,7 +149,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicrefEng().getText();
+            text = lib.EngThirdLessonSecondTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -163,7 +163,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicrefEng().getText();
+            text = lib.EngThirdLessonThirdTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -178,13 +178,16 @@ public class LessonTopicsVerify extends Base {
             Thread.sleep(3000);
             element.click();
 
+            lib.FirstLesson().click();
+            ThreadSleep5000();
+
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
             unitname = FirstTopic.getText();
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.MathFirstLessonFirstTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -198,7 +201,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.MathFirstLessonSecondTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -212,7 +215,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.MathFirstLessonThirdTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -225,9 +228,12 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000061l && mob <= 9000000080l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade4();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
+
+            lib.FirstLesson().click();
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -235,7 +241,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.EngFirstLessonFirstTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -249,7 +255,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicrefEng().getText();
+            text = lib.EngFirstLessonSecondTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -263,7 +269,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicrefEng().getText();
+            text = lib.EngFirstLessonThirdTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -276,9 +282,12 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000081l && mob <= 9000000100l) { // Mathematics Coursebook - Part A
             WebElement element = lib.MathematicsCoursebookGrade5();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
+
+            lib.FirstLesson().click();
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -286,7 +295,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.MathFirstLessonFirstTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -300,7 +309,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.MathFirstLessonSecondTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -314,7 +323,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.MathFirstLessonThirdTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -323,7 +332,6 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
         }
-
 
     }
 
@@ -336,13 +344,14 @@ public class LessonTopicsVerify extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
 
-        Thread.sleep(5000);
+        ThreadSleep5000();
     	lib.TeacherLibraryToggle().click();
-        Thread.sleep(5000);
+        ThreadSleep5000();
 
         // Scrolling Page
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String unitname, text;
+
         if (mob >= 9000000101l && mob <= 9000000104l) { // Environmental Studies Coursebook - Part A
             lib.EnvironmentalcoursebookGrade1().click();
             ThreadSleep5000();
@@ -356,7 +365,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
             ThreadSleep5000();
-            text = lib.FirstTopicref().getText();
+            text = lib.EnvFirstLessonFirstTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -370,7 +379,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.EnvFirstLessonSecondTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -384,7 +393,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.EnvFirstLessonThirdTopicRefGrade1().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -396,11 +405,11 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade2();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
 
             lib.ThirdLesson().click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -408,7 +417,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.EngThirdLessonFirstTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -422,7 +431,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicrefEng().getText();
+            text = lib.EngThirdLessonSecondTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -436,7 +445,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicrefEng().getText();
+            text = lib.EngThirdLessonThirdTopicRefGrade2().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -451,13 +460,16 @@ public class LessonTopicsVerify extends Base {
             Thread.sleep(3000);
             element.click();
 
+            lib.FirstLesson().click();
+            ThreadSleep5000();
+
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
             unitname = FirstTopic.getText();
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.MathFirstLessonFirstTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -471,7 +483,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.MathFirstLessonSecondTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -485,7 +497,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.MathFirstLessonThirdTopicRefGrade3().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -498,9 +510,12 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
             WebElement element = lib.EnglishCoursebookGrade4();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
+
+            lib.FirstLesson().click();
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -508,7 +523,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.EngFirstLessonFirstTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -522,7 +537,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicrefEng().getText();
+            text = lib.EngFirstLessonSecondTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -536,7 +551,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicrefEng().getText();
+            text = lib.EngFirstLessonThirdTopicRefGrade4().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -549,9 +564,12 @@ public class LessonTopicsVerify extends Base {
         else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
             WebElement element = lib.MathematicsCoursebookGrade5();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            Thread.sleep(5000);
+            ThreadSleep5000();
             element.click();
-            Thread.sleep(5000);
+            ThreadSleep5000();
+
+            lib.FirstLesson().click();
+            ThreadSleep5000();
 
 //          Topic Test -1
             WebElement FirstTopic = lib.FirstTopic();
@@ -559,7 +577,7 @@ public class LessonTopicsVerify extends Base {
             FirstTopic.click();
             ThreadSleep5000();
 
-            text = lib.FirstTopicref().getText();
+            text = lib.MathFirstLessonFirstTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -573,7 +591,7 @@ public class LessonTopicsVerify extends Base {
             SecondTopic.click();
             ThreadSleep5000();
 
-            text = lib.SecondTopicref().getText();
+            text = lib.MathFirstLessonSecondTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
@@ -587,7 +605,7 @@ public class LessonTopicsVerify extends Base {
             ThirdTopic.click();
             ThreadSleep5000();
 
-            text = lib.ThirdTopicref().getText();
+            text = lib.MathFirstLessonThirdTopicRefGrade5().getText();
             ThreadSleep5000();
 
             Validate(unitname, text);
