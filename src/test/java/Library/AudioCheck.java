@@ -3,9 +3,10 @@ package Library;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -22,6 +23,23 @@ public class AudioCheck extends Base {
     public Library lib;
     public LoginPage log;
     public WebDriver driver;
+
+    public void ThreadSleep5000() throws InterruptedException {
+        Thread.sleep(5000);
+    }
+    public void ThreadSleep3000() throws InterruptedException {
+        Thread.sleep(3000);
+    }
+
+    public void ValidateTest(String curr_time){
+        System.out.println(curr_time);
+        if(curr_time.equals("0:00")){
+            Assert.fail();
+        }
+        else{
+            System.out.println("Audio played");
+        }
+    }
 
     @BeforeMethod
     public void standardLogic() throws IOException {
@@ -51,8 +69,211 @@ public class AudioCheck extends Base {
         lib.StudentLibraryToggle().click();
         Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        if (mob >= 9000000001l && mob <= 9000000020l){
-            driver.findElement(By.xpath("//*[@id='616064e79e1fe601b5ee7677']/img")).click();
+        if (mob >= 9000000001l && mob <= 9000000020l){ // Environmental Studies Coursebook - Part A
+            lib.EnvironmentalcoursebookGrade1().click();
+            ThreadSleep3000();
+            lib.SecondLesson().click();
+            ThreadSleep3000();
+
+            lib.FirstTopic().click();
+            ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000021l && mob <= 9000000040l){ // English Coursebook - Part A
+            lib.EnglishCoursebookGrade2().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000041l && mob <= 9000000060l){ // English Coursebook - Part A
+            lib.EnglishCoursebookGrade3().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000061l && mob <= 9000000080l){ // English Coursebook - Part A
+            lib.EnglishCoursebookGrade4().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000081l && mob <= 9000000100l){ // English Coursebook - Part A
+            lib.EnglishCoursebookGrade5().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+    }
+    @Epic("This story represents the Library module of the onelern_school project.")
+    @Description("Examine whether or not the audio can successfully played properly.")
+    @Story("LIBFT_06")
+    @Test(dataProvider = "Teacherdata")
+    public void teacherVideocheck(String mobNumber, String password) throws IOException, InterruptedException {
+        Long mob = Long.parseLong(mobNumber);
+        BaseLogin user = new BaseLogin(driver);
+        user.userLogin("teacher", mobNumber, password);
+        ThreadSleep5000();
+        lib.TeacherLibraryToggle().click();
+        ThreadSleep5000();
+
+        // Scrolling Page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        if (mob >= 9000000101l && mob <= 9000000104l) { // English Coursebook - Part A
+            lib.EnvironmentalcoursebookGrade1().click();
+            ThreadSleep3000();
+            lib.SecondLesson().click();
+            ThreadSleep3000();
+
+            lib.FirstTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
+            lib.EnglishCoursebookGrade2().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000109l && mob <= 9000000112l) { // English Coursebook - Part A
+            lib.EnglishCoursebookGrade3().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
+            lib.EnglishCoursebookGrade4().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
+        }
+        else if (mob >= 9000000117l && mob <= 9000000120l) { // English Coursebook - Part A
+            lib.EnglishCoursebookGrade5().click();
+            ThreadSleep3000();
+            lib.FirstLesson().click();
+            ThreadSleep3000();
+
+            lib.EngCommunicationTopic().click();
+            ThreadSleep5000(); ThreadSleep5000();
+
+            WebElement element = lib.AudioPlayer();
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            ThreadSleep5000(); ThreadSleep5000();
+
+            lib.AudioPlayBtn().click();
+            ThreadSleep5000();
+
+            String curr_time = lib.CurrPlayTime().getText();
+            ValidateTest(curr_time);
         }
     }
 
@@ -60,16 +281,18 @@ public class AudioCheck extends Base {
     @DataProvider(name = "Studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-        Object loginData[][] = {{"9000000001", "123456"}};
+        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
+                {"9000000061", "123456"}, {"9000000081", "123456"}};
+//        Object loginData[][] = {{"9000000021", "123456"}};
 
         return loginData;
     }
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "Teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
 
-        Object loginData[][] = {{"9000000117", "123456"}, {"9000000105", "123456"}, {"9000000110", "123456"},
-                {"9000000114", "123456"}, {"9000000120", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"}, {"9000000113", "123456"}, {"9000000117", "123456"}};
+//        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
 }

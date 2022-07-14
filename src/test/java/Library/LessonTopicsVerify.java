@@ -55,7 +55,7 @@ public class LessonTopicsVerify extends Base {
 
     @Epic("This story represents the Library module of the onelern_school project.")
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
-    @Story("LIBFS_05")
+    @Story("LIBFS_04")
     @Test(dataProvider = "Studentdata")
     public void StudentLessonTopicCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
@@ -337,7 +337,7 @@ public class LessonTopicsVerify extends Base {
 
     @Epic("This story represents the Library module of the onelern_school project.")
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
-    @Story("LIBFT_05")
+    @Story("LIBFT_04")
     @Test(dataProvider = "Teachersdata")
     public void TeacherLessonTopicCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);

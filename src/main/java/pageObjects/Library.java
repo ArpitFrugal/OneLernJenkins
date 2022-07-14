@@ -83,6 +83,7 @@ public class Library {
 	By MathematicsCoursebookGrade5 = By.xpath("//*[@id='616074c09e1fe601b5ee76a8']/img");
 	By MathVideoPathGrade5 = By.xpath("//*[@id='6225ff0d25f26af7958b2a36']/vm-hls/vm-video/vm-file/video");
 	By EnglishCoursebookGrade5 = By.xpath("//*[@id='6160748b9e1fe601b5ee76a7']/img");
+
 	// search box paths
 	By SearchIcon = By.xpath("//img[@class='pointer']");
 	By SearchInput = By.xpath("//input[contains(@class,'search-box')]");
@@ -90,6 +91,15 @@ public class Library {
 	By TotalCount = By.xpath("//span[contains(@class,'total')]");
 
 	By WorkbookHeading = By.xpath("/html/body/header/div/div[1]/span");
+
+	// Audio check
+	By AudioPlayer = By.xpath("//div[contains(@class,'audio-player')]");
+	By AudioPlayBtn = By.xpath("//div[contains(@class,'player-controls')]/div/span");
+	By CurrPlayTime = By.xpath("//div[contains(@class,'audio-time-slider')]/div/span");
+	By EngCommunicationTopic = By.xpath("//div[text()='Communication Skills']");
+
+
+
 
 	public Library(WebDriver driver2) {
 		this.driver = driver2;
@@ -155,9 +165,6 @@ public class Library {
 
 
 
-
-
-
 	// videoCheck
 	public WebElement EnvironmentalcoursebookGrade1(){return driver.findElement(EnvironmentalcoursebookGrade1);}
 	public WebElement FirstLesson(){return driver.findElement(FirstLesson);}
@@ -191,6 +198,12 @@ public class Library {
 	public String TotalCount(){return driver.findElement(TotalCount).getText();}
 
 	public WebElement WorkbookHeading(){return driver.findElement(WorkbookHeading);}
+
+	// Audio Check
+	public WebElement AudioPlayer(){return driver.findElement(AudioPlayer);}
+	public WebElement AudioPlayBtn(){return driver.findElement(AudioPlayBtn);}
+	public WebElement CurrPlayTime(){return driver.findElement(CurrPlayTime);}
+	public WebElement EngCommunicationTopic(){return driver.findElement(EngCommunicationTopic);}
 
 
 }

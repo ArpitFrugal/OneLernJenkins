@@ -20,6 +20,7 @@
 			<class name="Library.LessonTopicsVerify" />
 			<class name="Library.SearchCheck" />
 			<class name="Library.VideoCheck" />
+			<class name="Library.AudioCheck"/>
 
 
 			<!--			Login-->
