@@ -55,7 +55,7 @@ public class LessonNameVerify extends Base {
         lib.StudentImageClick().click();
 
         ThreadSleep5000();
-        lib.StudentLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page
@@ -373,7 +373,7 @@ public class LessonNameVerify extends Base {
         user.userLogin("teacher", mobNumber, password);
 
         ThreadSleep5000();
-        lib.TeacherLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page
@@ -683,6 +683,7 @@ public class LessonNameVerify extends Base {
 
         Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
                 { "9000000114", "123456" }, { "9000000120", "123456" } };
+//        Object loginData[][] = { { "9000000101", "123456" }};
         return loginData;
     }
     

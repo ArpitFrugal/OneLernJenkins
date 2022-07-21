@@ -1,6 +1,7 @@
 package testResource;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,6 @@ import pageObjects.LoginPage;
 public class BaseLogin extends Base {
 
 	public LoginPage log;
-	public Library lib;
 	public WebDriver driver;
 
 	public BaseLogin(WebDriver driver2) {
@@ -21,9 +21,8 @@ public class BaseLogin extends Base {
 
 	public void userLogin(String user, String mobNumber, String pass) throws IOException, InterruptedException {
 		log = new LoginPage(driver);
-		lib = new Library(driver);
 
-		if (user == "teacher") {
+		if(user.equals("teacher")) {
 			log.getTeacherSignIn().click();
 			log.getUserName().sendKeys(mobNumber);
 			log.getSubmitButton().click();

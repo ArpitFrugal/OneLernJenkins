@@ -74,7 +74,7 @@ public class VideoCheck extends Base {
         lib.StudentImageClick().click();
         ThreadSleep3000();
 
-        lib.StudentLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep3000();
 
         // Scrolling Page
@@ -285,7 +285,7 @@ public class VideoCheck extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         ThreadSleep5000();
-        lib.TeacherLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page

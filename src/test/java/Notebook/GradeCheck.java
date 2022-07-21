@@ -3,7 +3,6 @@ package Notebook;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -33,7 +32,8 @@ public class GradeCheck extends Base {
     }
 
     public void ValidateTest(String actual_grade, String expected_grade){
-        if (actual_grade.equals(expected_grade)) {
+        System.out.println(actual_grade +" "+expected_grade);
+        if (actual_grade.contains(expected_grade)) {
             System.out.println("PASSED");
         } else {
             Assert.fail();
@@ -50,17 +50,17 @@ public class GradeCheck extends Base {
         Thread.sleep(2000);
         note.StudentImageClick().click();
         Thread.sleep(2000);
-        note.StudentNotebookToggle().click();
-
+        note.NotebookToggle().click();
+        Thread.sleep(2000);
         if (mob >= 9000000001l && mob <= 9000000020l) {// English
-            String actual_grade = note.EnglishGradeTextGrade1().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 1 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000021l && mob <= 9000000040l) {// English
-            String actual_grade = note.EnglishGradeTextGrade2().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 2 ";
 
             ValidateTest(actual_grade, expected_grade);
@@ -68,21 +68,21 @@ public class GradeCheck extends Base {
         }
 
         else if (mob >= 9000000041l && mob <= 9000000060l) {// English
-            String actual_grade = note.EnglishGradeTextGrade3().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 3 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000061l && mob <= 9000000080l) {
-            String actual_grade = note.EnglishGradeTextGrade4().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 4 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000081l && mob <= 9000000100l) {
-            String actual_grade = note.EnglishGradeTextGrade5().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 5 ";
 
             ValidateTest(actual_grade, expected_grade);
@@ -99,37 +99,37 @@ public class GradeCheck extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
-        note.TeacherNotebookToggle().click();
+        note.NotebookToggle().click();
         if (mob >= 9000000101l && mob <= 9000000104l) {
-            String actual_grade = note.EnglishGradeTextGrade1().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 1 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000105l && mob <= 9000000108l) {
-            String actual_grade = note.EnglishGradeTextGrade2().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 2 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000109l && mob <= 9000000112l) {
-            String actual_grade = note.EnglishGradeTextGrade3().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 3 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000113l && mob <= 9000000116l) {
-            String actual_grade = note.EnglishGradeTextGrade4().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 4 ";
 
             ValidateTest(actual_grade, expected_grade);
         }
 
         else if (mob >= 9000000117l && mob <= 9000000120l) {
-            String actual_grade = note.EnglishGradeTextGrade5().getText();
+            String actual_grade = note.CoursebooksGradeTextGrade().getText();
             String expected_grade = "GRADE 5 ";
 
             ValidateTest(actual_grade, expected_grade);
@@ -145,7 +145,6 @@ public class GradeCheck extends Base {
 
         Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
                 { "9000000069", "123456" }, { "9000000081", "123456" } };
-
 //        Object loginData[][] = { { "9000000001", "123456" }};
         return loginData;
     }

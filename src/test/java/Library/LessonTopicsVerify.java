@@ -45,7 +45,7 @@ public class LessonTopicsVerify extends Base {
     }
     public void Validate(String unitname, String text){
         System.out.println(unitname + "\n" + text);
-        if(unitname.equals(text)){
+        if(unitname.contains(text)){
             System.out.println("PASSED");
         }
         else{
@@ -64,7 +64,7 @@ public class LessonTopicsVerify extends Base {
         lib.StudentImageClick().click();
 
         ThreadSleep5000();
-        lib.StudentLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page
@@ -144,7 +144,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -2
-            WebElement SecondTopic = lib.SecondTopicEng();
+            WebElement SecondTopic = lib.SecondTopic();
             unitname = SecondTopic.getText();
             SecondTopic.click();
             ThreadSleep5000();
@@ -158,7 +158,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -3
-            WebElement ThirdTopic = lib.ThirdTopicEng();
+            WebElement ThirdTopic = lib.ThirdTopic();
             unitname = ThirdTopic.getText();
             ThirdTopic.click();
             ThreadSleep5000();
@@ -250,7 +250,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -2
-            WebElement SecondTopic = lib.SecondTopicEng();
+            WebElement SecondTopic = lib.SecondTopic();
             unitname = SecondTopic.getText();
             SecondTopic.click();
             ThreadSleep5000();
@@ -264,7 +264,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -3
-            WebElement ThirdTopic = lib.ThirdTopicEng();
+            WebElement ThirdTopic = lib.ThirdTopic();
             unitname = ThirdTopic.getText();
             ThirdTopic.click();
             ThreadSleep5000();
@@ -345,7 +345,7 @@ public class LessonTopicsVerify extends Base {
         user.userLogin("teacher", mobNumber, password);
 
         ThreadSleep5000();
-    	lib.TeacherLibraryToggle().click();
+    	lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page
@@ -426,7 +426,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -2
-            WebElement SecondTopic = lib.SecondTopicEng();
+            WebElement SecondTopic = lib.SecondTopic();
             unitname = SecondTopic.getText();
             SecondTopic.click();
             ThreadSleep5000();
@@ -440,7 +440,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -3
-            WebElement ThirdTopic = lib.ThirdTopicEng();
+            WebElement ThirdTopic = lib.ThirdTopic();
             unitname = ThirdTopic.getText();
             ThirdTopic.click();
             ThreadSleep5000();
@@ -532,7 +532,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -2
-            WebElement SecondTopic = lib.SecondTopicEng();
+            WebElement SecondTopic = lib.SecondTopic();
             unitname = SecondTopic.getText();
             SecondTopic.click();
             ThreadSleep5000();
@@ -546,7 +546,7 @@ public class LessonTopicsVerify extends Base {
             ThreadSleep5000();
 
 //          Topic Test -3
-            WebElement ThirdTopic = lib.ThirdTopicEng();
+            WebElement ThirdTopic = lib.ThirdTopic();
             unitname = ThirdTopic.getText();
             ThirdTopic.click();
             ThreadSleep5000();
@@ -623,7 +623,7 @@ public class LessonTopicsVerify extends Base {
 
         Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
                 { "9000000069", "123456" }, { "9000000081", "123456" } };
-//        Object loginData[][] = { { "9000000024", "123456" }};
+//        Object loginData[][] = { { "9000000001", "123456" }};
         return loginData;
     }
 
@@ -632,6 +632,7 @@ public class LessonTopicsVerify extends Base {
 
         Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
                 { "9000000114", "123456" }, { "9000000120", "123456" } };
+//        Object loginData[][] = { { "9000000101", "123456" }};
         return loginData;
     }
 }

@@ -3,7 +3,6 @@ package Notebook;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,7 +59,7 @@ public class LessonNameVerify extends Base {
         note.StudentImageClick().click();
         Thread.sleep(5000);
 
-        note.StudentNotebookToggle().click();
+        note.NotebookToggle().click();
         Thread.sleep(5000);
 
         // Scrolling Page
@@ -253,7 +252,7 @@ public class LessonNameVerify extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(5000);
 
-    	note.TeacherNotebookToggle().click();
+    	note.NotebookToggle().click();
         Thread.sleep(5000);
 
         // Scrolling Page

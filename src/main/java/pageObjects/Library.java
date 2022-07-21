@@ -11,10 +11,13 @@ public class Library {
 	public WebDriver driver;
 
 	By StudentImageClick = By.xpath("//div[@class='d-flex justify-content-center align-items-center flex-column']//div[2]//button[1]//img[1]");
-	By TeacherLibraryToggle = By.xpath("//img[@src='/images/library.svg']");
-	By StudentLibraryToggle = By.xpath("//img[@src='/images/library-white.svg']");
-	By TeacherBackButton = By.xpath("/html/body/header/div[1]/div[1]/button");
+//	By TeacherLibraryToggle = By.xpath("//img[@src='/images/library.svg']");
+//	By StudentLibraryToggle = By.xpath("//img[@src='/images/library-white.svg']");
+//	By TeacherBackButton = By.xpath("/html/body/header/div[1]/div[1]/button");
 
+	By LibraryToggle = By.id("library");
+	By BackButton = By.id("back_btn");
+	By HeaderBackButton = By.id("inner_header_back_btn");
 
 	// Grade check
 	By EnglishGradeTextGrade1 = By.xpath("//div[@id='616064e79e1fe601b5ee7677']//span");
@@ -60,18 +63,30 @@ public class Library {
 
 	// videocheck paths
 	By EnvironmentalcoursebookGrade1 = By.xpath("//*[@id='61606a629e1fe601b5ee768c']/img");
-	By FirstLesson = By.xpath("//div[@id='item_1']");
-	By SecondLesson = By.xpath("//div[@id='item_2']");
-	By ThirdLesson = By.xpath("//div[@id='item_3']");
-	By videosPageTab = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[1]/div/button[2]");
+//	By FirstLesson = By.xpath("//div[@id='item_1']");
+//	By SecondLesson = By.xpath("//div[@id='item_2']");
+//	By ThirdLesson = By.xpath("//div[@id='item_3']");
+	By FirstLesson = By.id("item_1");
+	By SecondLesson = By.id("item_2");
+	By ThirdLesson = By.id("item_3");
+
+//	By videosPageTab = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[1]/div/button[2]");
+
+	By videosPageTab = By.id("videos");
 	By VideoWatchBtn = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div");
-	By VideoModalboxCloseBtn = By.xpath("/html/body/div[5]/div[1]/button");
-	By ContentsPageTab = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[1]/div/button[1]");
-	By FirstTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[2]/a");
-	By SecondTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[3]/a/div/div");
-	By ThirdTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[4]/a/div/div");
-	By SecondTopicEng = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[3]/a");
-	By ThirdTopicEng = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[4]/a");
+
+//	By VideoModalboxCloseBtn = By.xpath("/html/body/div[5]/div[1]/button");
+//	By ContentsPageTab = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[1]/div/button[1]");
+//	By FirstTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[2]/a");
+//	By SecondTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[3]/a/div/div");
+//	By ThirdTopic = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[4]/a/div/div");
+//	By SecondTopicEng = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[3]/a");
+//	By ThirdTopicEng = By.xpath("/html/body/div[3]/div/div[2]/div/div/div/div/div[4]/a");
+	By VideoModalboxCloseBtn = By.id("close_btn");
+	By ContentsPageTab = By.id("contents");
+	By FirstTopic = By.id("section_1");
+	By SecondTopic = By.id("section_2");
+	By ThirdTopic = By.id("section_3");
 	By EnvVideoPathGrade1 = By.xpath("//*[@id='6220ae6ed7f6eba6ab133b62']/vm-hls/vm-video/vm-file/video");
 	By EnglishCoursebookGrade2 = By.xpath("//*[@id='61606c609e1fe601b5ee7690']/img");
 	By EngVideoPathGrade2 = By.xpath("//*[@id='6228a37120d7ac6ee7d2e2a1']/vm-hls/vm-video/vm-file/video");
@@ -85,12 +100,19 @@ public class Library {
 	By EnglishCoursebookGrade5 = By.xpath("//*[@id='6160748b9e1fe601b5ee76a7']/img");
 
 	// search box paths
-	By SearchIcon = By.xpath("//img[@class='pointer']");
-	By SearchInput = By.xpath("//input[contains(@class,'search-box')]");
-	By HighlightTexts = By.xpath("//span[contains(@class,'j-highlight')]");
-	By TotalCount = By.xpath("//span[contains(@class,'total')]");
+//	By SearchIcon = By.xpath("//img[@class='pointer']");
+//	By SearchInput = By.xpath("//input[contains(@class,'search-box')]");
+//	By HighlightTexts = By.xpath("//span[contains(@class,'j-highlight')]");
+//	By TotalCount = By.xpath("//span[contains(@class,'total')]");
+//	By WorkbookHeading = By.xpath("/html/body/header/div/div[1]/span");
 
-	By WorkbookHeading = By.xpath("/html/body/header/div/div[1]/span");
+	By SearchIcon = By.id("search_icon");
+	By TeacherSearchIcon = By.xpath("//img[@class='pointer']");
+	By SearchInput = By.id("search_box");
+	By HighlightTexts = By.xpath("//span[contains(@class,'j-highlight')]");
+	By TotalCount = By.id("search_total");
+
+	By WorkbookHeading = By.id("book_title");
 
 	// Audio check
 	By AudioPlayer = By.xpath("//div[contains(@class,'audio-player')]");
@@ -107,20 +129,24 @@ public class Library {
 	public WebElement StudentImageClick() {
 		return driver.findElement(StudentImageClick);
 	}
-	public WebElement TeacherLibraryToggle() {
-		return driver.findElement(TeacherLibraryToggle);
-	}
-	public WebElement StudentLibraryToggle() {
-		return driver.findElement(StudentLibraryToggle);
-	}
+//	public WebElement TeacherLibraryToggle() {
+//		return driver.findElement(TeacherLibraryToggle);
+//	}
+//	public WebElement StudentLibraryToggle() {
+//		return driver.findElement(StudentLibraryToggle);
+//	}
+//	public WebElement BackButton() {
+//		return driver.findElement(TeacherBackButton);
+//	}
+
+	public WebElement LibraryToggle() {return driver.findElement(LibraryToggle);}
 	public WebElement BackButton() {
-		return driver.findElement(TeacherBackButton);
+		return driver.findElement(BackButton);
 	}
 
-	public WebElement TeacherBackButton(){
-		return driver.findElement(TeacherBackButton);
-	}
-
+//	public WebElement TeacherBackButton(){
+//		return driver.findElement(TeacherBackButton);
+//	}
 
 	// Grade Check
 	public WebElement EnglishGradeTextGrade1(){return driver.findElement(EnglishGradeTextGrade1);}
@@ -177,8 +203,10 @@ public class Library {
 	public WebElement FirstTopic(){return driver.findElement(FirstTopic);}
 	public WebElement SecondTopic(){return driver.findElement(SecondTopic);}
 	public WebElement ThirdTopic(){return driver.findElement(ThirdTopic);}
-	public WebElement SecondTopicEng(){return driver.findElement(SecondTopicEng);}
-	public WebElement ThirdTopicEng(){return driver.findElement(ThirdTopicEng);}
+
+//	public WebElement SecondTopicEng(){return driver.findElement(SecondTopicEng);}
+//	public WebElement ThirdTopicEng(){return driver.findElement(ThirdTopicEng);}
+
 	public WebElement EnvVideoPathGrade1(){return driver.findElement(EnvVideoPathGrade1);}
 	public WebElement EnglishCoursebookGrade2(){return driver.findElement(EnglishCoursebookGrade2);}
 	public WebElement EngVideoPathGrade2(){return driver.findElement(EngVideoPathGrade2);}
@@ -192,6 +220,7 @@ public class Library {
 	public WebElement EnglishCoursebookGrade5(){return driver.findElement(EnglishCoursebookGrade5);}
 
 	// search box
+	public WebElement TeacherSearchIcon(){return driver.findElement(TeacherSearchIcon);}
 	public WebElement SearchIcon(){return driver.findElement(SearchIcon);}
 	public WebElement SearchInput(){return driver.findElement(SearchInput);}
 	public List<WebElement> HighlightTexts(){return driver.findElements(HighlightTexts);}

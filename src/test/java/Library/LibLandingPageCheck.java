@@ -3,6 +3,7 @@ package Library;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
+import org.testng.log4testng.Logger;
 import resources.Base;
 import testResource.BaseLogin;
 
@@ -20,10 +21,11 @@ import pageObjects.Library;
 import pageObjects.LoginPage;
 
 public class LibLandingPageCheck extends Base {
-
+	Logger logg = Logger.getLogger(LibLandingPageCheck.class);
 	public Library lib;
 	public LoginPage log;
 	public WebDriver driver;
+
 
 	@BeforeMethod
 	public void standardLogic() throws IOException {
@@ -32,6 +34,7 @@ public class LibLandingPageCheck extends Base {
 		driver.get(prop.getProperty("url"));
 		lib = new Library(driver);
 		log = new LoginPage(driver);
+		logg.debug("before method");
 
 	}
 	
@@ -49,10 +52,12 @@ public class LibLandingPageCheck extends Base {
 		ThreadSleep5000();
 		lib.StudentImageClick().click();
 		ThreadSleep5000();
-		lib.StudentLibraryToggle().click();
+		lib.LibraryToggle().click();
 		ThreadSleep5000();
 		String Headingtext_actual = lib.WorkbookHeading().getText();
 		String Headingtext_expected = "Library";
+
+		logg.debug("In Method");
 		if (Headingtext_actual.equals(Headingtext_expected)) {
 			System.out.println("Library Module is active");
 		} else {
@@ -69,7 +74,7 @@ public class LibLandingPageCheck extends Base {
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("teacher", mobNumber, password);
 		ThreadSleep5000();
-		lib.TeacherLibraryToggle().click();
+		lib.LibraryToggle().click();
 		ThreadSleep5000();
 		String Headingtext_actual = lib.WorkbookHeading().getText();
 		String Headingtext_expected = "Library";
@@ -84,6 +89,7 @@ public class LibLandingPageCheck extends Base {
 	@AfterMethod
 	public void tearDown() {
 		driver.close();
+		logg.debug("After Method");
 	}
 
 	// This method provides data inputs to the above mentioned data receiver
@@ -94,7 +100,6 @@ public class LibLandingPageCheck extends Base {
 		Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
 				{ "9000000069", "123456" }, { "9000000081", "123456" } };
 //		Object loginData[][] = { { "9000000001", "123456" } };
-
 		return loginData;
 	}
 

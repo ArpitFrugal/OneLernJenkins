@@ -3,7 +3,6 @@ package Library;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -57,7 +56,7 @@ public class GradeCheck extends Base {
 		ThreadSleep5000();
 		lib.StudentImageClick().click();
 		ThreadSleep5000();
-		lib.StudentLibraryToggle().click();
+		lib.LibraryToggle().click();
 		ThreadSleep5000();
 		if (mob >= 9000000001l && mob <= 9000000020l) {// English
 			String actual_grade = lib.EnglishGradeTextGrade1().getText();
@@ -106,7 +105,7 @@ public class GradeCheck extends Base {
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("teacher", mobNumber, password);
 		ThreadSleep5000();
-		lib.TeacherLibraryToggle().click();
+		lib.LibraryToggle().click();
 		if (mob >= 9000000101l && mob <= 9000000104l) {
 			String actual_grade = lib.EnglishGradeTextGrade1().getText();
 			String expected_grade = "GRADE 1";
@@ -147,8 +146,9 @@ public class GradeCheck extends Base {
 	@DataProvider(name = "Studentdata")
 	public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-		Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
-				{ "9000000069", "123456" }, { "9000000081", "123456" } };
+		Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
+				{"9000000061", "123456"}, {"9000000081", "123456"}};
+//        Object loginData[][] = {{"9000000021", "123456"}};
 
 		return loginData;
 	}
@@ -156,8 +156,9 @@ public class GradeCheck extends Base {
 	@DataProvider(name = "Teachersdata")
 	public Object[][] getteacherData() throws FileAlreadyExistsException {
 
-		Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-				{ "9000000114", "123456" }, { "9000000120", "123456" } };
+		Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+				{"9000000113", "123456"}, {"9000000117", "123456"}};
+//        Object loginData[][] = {{"9000000101", "123456"}};
 
 		return loginData;
 	}

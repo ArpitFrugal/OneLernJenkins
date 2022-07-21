@@ -66,7 +66,7 @@ public class AudioCheck extends Base {
         lib.StudentImageClick().click();
 
         Thread.sleep(5000);
-        lib.StudentLibraryToggle().click();
+        lib.LibraryToggle().click();
         Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         if (mob >= 9000000001l && mob <= 9000000020l){ // Environmental Studies Coursebook - Part A
@@ -174,7 +174,7 @@ public class AudioCheck extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         ThreadSleep5000();
-        lib.TeacherLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         // Scrolling Page
@@ -291,7 +291,8 @@ public class AudioCheck extends Base {
     @DataProvider(name = "Teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
 
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"}, {"9000000113", "123456"}, {"9000000117", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }

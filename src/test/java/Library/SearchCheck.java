@@ -43,6 +43,7 @@ public class SearchCheck extends Base {
 
 
     public void ValidateTest(int expected_count, int countInSearchBox, int search_elements_size){
+        System.out.println(expected_count +" "+ countInSearchBox+ " "+search_elements_size);
         if(countInSearchBox == expected_count && search_elements_size == expected_count ){
             System.out.println("PASSED");
         }
@@ -61,7 +62,7 @@ public class SearchCheck extends Base {
         lib.StudentImageClick().click();
 
         ThreadSleep3000();
-        lib.StudentLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep3000();
 
         if (mob >= 9000000001l && mob <= 9000000020l){ // Environmental Studies Coursebook - Part A
@@ -201,7 +202,7 @@ public class SearchCheck extends Base {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(5000);
-        lib.TeacherLibraryToggle().click();
+        lib.LibraryToggle().click();
         ThreadSleep5000();
 
         if (mob >= 9000000101l && mob <= 9000000104l){ // Environmental Studies Coursebook - Part A
@@ -215,7 +216,7 @@ public class SearchCheck extends Base {
             ThreadSleep3000();
 
             // click on search icon
-            lib.SearchIcon().click();
+            lib.TeacherSearchIcon().click();
 
             //input the text
             lib.SearchInput().sendKeys(search_text);
@@ -240,7 +241,7 @@ public class SearchCheck extends Base {
             ThreadSleep3000();
 
             // click on search icon
-            lib.SearchIcon().click();
+            lib.TeacherSearchIcon().click();
 
             //input the text
             lib.SearchInput().sendKeys(search_text);
@@ -265,7 +266,7 @@ public class SearchCheck extends Base {
             ThreadSleep3000();
 
             // click on search icon
-            lib.SearchIcon().click();
+            lib.TeacherSearchIcon().click();
 
             //input the text
             lib.SearchInput().sendKeys(search_text);
@@ -290,7 +291,7 @@ public class SearchCheck extends Base {
             ThreadSleep3000();
 
             // click on search icon
-            lib.SearchIcon().click();
+            lib.TeacherSearchIcon().click();
 
             //input the text
             lib.SearchInput().sendKeys(search_text);
@@ -315,7 +316,7 @@ public class SearchCheck extends Base {
             ThreadSleep3000();
 
             // click on search icon
-            lib.SearchIcon().click();
+            lib.TeacherSearchIcon().click();
 
             //input the text
             lib.SearchInput().sendKeys(search_text);

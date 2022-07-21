@@ -3,7 +3,6 @@ package Library;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,7 +62,7 @@ public class WorkbookNameVerify extends Base {
 		ThreadSleep5000();
 		lib.StudentImageClick().click();
 		ThreadSleep5000();
-		lib.StudentLibraryToggle().click();
+		lib.LibraryToggle().click();
 		ThreadSleep5000();
 
 		// Scrolling page
@@ -136,7 +135,7 @@ public class WorkbookNameVerify extends Base {
 		BaseLogin user = new BaseLogin(driver);
 		user.userLogin("teacher", mobNumber, password);
 		ThreadSleep5000();
-		lib.TeacherLibraryToggle().click();
+		lib.LibraryToggle().click();
 		ThreadSleep5000();
 
 		// Scrolling page
